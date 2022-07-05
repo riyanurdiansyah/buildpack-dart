@@ -40,12 +40,12 @@ build_pubspec() {
   export PATH=$PATH:$DART_PATH:$PUB_CACHE_BIN
   message "*** Running pub get"
 
-  flutter --version
+  dart --version
 
   #start pub from the /app folder to have correct symlink paths
-  flutter pub get  
+  dart pub get  
   
-  flutter pub global activate webdev
+  dart pub global activate webdev
   if [ -d "web" ]
   then
     message "*** Running webdev build"
